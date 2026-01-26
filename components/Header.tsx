@@ -42,11 +42,8 @@ export function Header() {
                     }}
                 >
                     <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold text-xl">
-                        A
+                        M
                     </div>
-                    <span className="text-gray-900 dark:text-white font-bold text-lg hidden sm:block">
-                        Malak &nbsp; <span className="sm:inline hidden text-secondary">| Developer</span>
-                    </span>
                 </a>
 
                 {/* Desktop Nav */}

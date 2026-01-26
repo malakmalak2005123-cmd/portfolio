@@ -6,7 +6,7 @@ import { profileData } from "@/lib/data";
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
     const [text, setText] = useState("");
-    const fullText = `Welcome to my World...`;
+    const fullText = `Let’s Build Something Together...`;
 
     useEffect(() => {
         let currentIndex = 0;

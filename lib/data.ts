@@ -13,7 +13,7 @@ export const translations = {
         hero: {
             greeting: "Hi, I am",
             role: "Full Stack Developer",
-            description: "Passionate Full Stack Developer creating modern web apps by combining interactive UIs with robust back-end logic for a seamless user experience.",
+            description: "Passionate about innovation, I develop high-performance and scalable web solutions with high added value.",
             downloadCv: "Download CV",
             contactMe: "Contact Me",
         },
@@ -51,7 +51,7 @@ export const translations = {
         hero: {
             greeting: "Bonjour, je suis",
             role: "Développeur Full Stack",
-            description: "Développeur Full Stack passionné, je conçois des applications web modernes alliant interfaces interactives et back-end robuste pour une expérience utilisateur fluide.",
+            description: "Passionné par l’innovation, je développe des solutions web performantes et évolutives à forte valeur ajoutée.",
             downloadCv: "Télécharger CV",
             contactMe: "Me Contacter",
         },
