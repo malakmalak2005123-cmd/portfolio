@@ -36,25 +36,30 @@ export function Header() {
             <div className="container mx-auto flex justify-between items-center px-4 max-w-7xl">
                 <a
                     href="#"
-                    className="flex items-center gap-2 "
+                    className="flex items-center gap-2"
                     onClick={() => {
                         window.scrollTo(0, 0);
                     }}
                 >
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-r from-pink-500 to-orange-400 flex items-center justify-center text-white font-bold text-xl">
-                        M
-                    </div>
+                    <span className="text-2xl font-bold tracking-tighter text-white">
+                        Malak Messaoudi
+                    </span>
                 </a>
 
                 {/* Desktop Nav */}
                 <nav className="hidden md:flex flex-row gap-10">
-                    {navLinks.map((link) => (
+                    {navLinks.map((link, index) => (
                         <a
                             key={link.name}
                             href={link.href}
-                            className="text-secondary hover:text-primary dark:hover:text-white text-[18px] font-medium transition-colors cursor-pointer"
+                            className="text-[#aaa6c3] hover:text-white text-[14px] font-medium transition-colors cursor-pointer flex flex-col items-center"
                         >
-                            {link.name}
+                            <span className="text-[10px] text-gray-500 mb-[-4px]">
+                                {String(index + 1).padStart(2, '0')}
+                            </span>
+                            <span>
+                                // {link.name.toLowerCase()}
+                            </span>
                         </a>
                     ))}
                 </nav>

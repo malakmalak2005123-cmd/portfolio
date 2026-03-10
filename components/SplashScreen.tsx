@@ -3,25 +3,13 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { profileData } from "@/lib/data";
+import { Loader2 } from "lucide-react";
 
 export function SplashScreen({ onComplete }: { onComplete: () => void }) {
-    const [text, setText] = useState("");
-    const fullText = `Let’s Build Something Together...`;
-
     useEffect(() => {
-        let currentIndex = 0;
-        const interval = setInterval(() => {
-            if (currentIndex <= fullText.length) {
-                setText(fullText.slice(0, currentIndex));
-                currentIndex++;
-            } else {
-                clearInterval(interval);
-                setTimeout(onComplete, 1000); // Wait 1s after text finishes before completing
-            }
-        }, 100);
-
-        return () => clearInterval(interval);
-    }, [fullText, onComplete]);
+        const timeout = setTimeout(onComplete, 2000); // Wait 2s before completing
+        return () => clearTimeout(timeout);
+    }, [onComplete]);
 
     return (
         <motion.div
@@ -31,14 +19,17 @@ export function SplashScreen({ onComplete }: { onComplete: () => void }) {
             className="fixed inset-0 z-[100] bg-[#050816] flex items-center justify-center"
         >
             <div className="flex flex-col items-center">
-                <motion.h1
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    className="text-4xl md:text-6xl font-bold text-white mb-4"
+                <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{
+                        duration: 1,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                    className="mb-8"
                 >
-                    <span className="text-violet-500">{text}</span>
-                    <span className="animate-pulse">|</span>
-                </motion.h1>
+                    <Loader2 className="w-12 h-12 text-violet-500" />
+                </motion.div>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

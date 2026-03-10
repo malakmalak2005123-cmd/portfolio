@@ -4,12 +4,22 @@ import { useLanguage } from "@/context/language-context";
 import { translations, profileData } from "@/lib/data";
 import { motion, AnimatePresence } from "framer-motion";
 import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Projects() {
     const { language } = useLanguage();
     const t = translations[language].projects;
     const [activeIndex, setActiveIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        checkMobile();
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
 
     const projects = profileData.projects;
 
@@ -42,7 +52,7 @@ export function Projects() {
             // Let's force index 1 to be "right" when 0 is active, and 0 to be "left" when 1 is active? 
             // Actually with 2 items, a standard center/right toggle is fine.
             if (index !== activeIndex) return {
-                x: 300, scale: 0.8, zIndex: 1, opacity: 0.5, rotateY: -25
+                x: isMobile ? 50 : 300, scale: 0.8, zIndex: 1, opacity: 0.5, rotateY: -25
             }
         }
 
@@ -50,8 +60,13 @@ export function Projects() {
         const isRight = offset > 0;
         const isLeft = offset < 0;
 
+        // Responsive spacing
+        const spacing = isMobile ? 40 : 450;
+        // On mobile, we might want them essentially stacked or very close, 
+        // relying more on opacity/scale to differentiate.
+
         // Base styles
-        let x = offset * 450; // Spacing
+        let x = offset * spacing;
         let scale = 1 - Math.abs(offset) * 0.2;
         let zIndex = 10 - Math.abs(offset);
         let opacity = 1 - Math.abs(offset) * 0.3;
@@ -61,6 +76,8 @@ export function Projects() {
         if (Math.abs(offset) > 1) {
             opacity = 0;
             scale = 0.5;
+            // Hide completely if far away to prevent overlap issues
+            if (isMobile) x = offset * 1000; // Move far away
         }
 
         return { x, scale, zIndex, opacity, rotateY, isActive };

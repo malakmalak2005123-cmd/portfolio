@@ -38,6 +38,7 @@ export const translations = {
             title: "Contact Me",
             email: "Email",
             github: "GitHub",
+            phone: "Phone",
         },
     },
     fr: {
@@ -76,6 +77,7 @@ export const translations = {
             title: "Contactez-moi",
             email: "Email",
             github: "GitHub",
+            phone: "Téléphone",
         },
     },
 };
@@ -86,6 +88,7 @@ export const profileData = {
         fr: "Développeur Full Stack",
     },
     email: "malakmalak2005123@gmail.com",
+    phone: "0709186544",
     github: "https://github.com/malakmalak2005123-cmd",
     linkedin: "https://www.linkedin.com/in/malak-messaoudi/",
     skills: {
@@ -177,16 +180,22 @@ export const profileData = {
                 en: "An e-commerce website dedicated to cat adoption, allowing users to browse available cat profiles, make online adoption requests, and access essential products related to cat well-being.",
                 fr: "Un site web e-commerce dédié à l’adoption de chats, permettant aux utilisateurs de consulter les profils des chats disponibles, d’effectuer des demandes d’adoption en ligne et d’accéder aux produits essentiels liés au bien-être des chats.",
             },
-            tags: ["PHP", "Laravel", "Vue.js", "MySQL", "HTML", "CSS", "Docker", "Git", "GitHub"],
+            tags: ["PHP", "MySQL", "HTML", "CSS", "Git", "GitHub"],
             link: "/projects/catshop", // Internal link
-            liveUrl: "https://catshop-production-2fb1.up.railway.app/home.php",
+            liveUrl: "https://catshop.rf.gd/",
             repoUrl: "https://github.com/malakmalak2005123-cmd/CatShop",
             images: [
-                "/images/projects/catshop/image.png",
-                "/images/projects/catshop/image copy.png",
-                "/images/projects/catshop/image copy 2.png",
-                "/images/projects/catshop/image copy 3.png",
-                "/images/projects/catshop/image copy 4.png",
+                "/images/projects/catshop/project/image.png",
+                "/images/projects/catshop/project/image copy.png",
+                "/images/projects/catshop/project/image copy 2.png",
+                "/images/projects/catshop/project/image copy 3.png",
+                "/images/projects/catshop/project/image copy 4.png",
+                "/images/projects/catshop/project/image copy 5.png",
+            ],
+            adminImages: [
+                "/images/projects/catshop/admin/image copy 2.png",
+                "/images/projects/catshop/admin/image copy 3.png",
+                "/images/projects/catshop/admin/image copy 4.png",
             ],
             features: [
                 "Browse Available Cats for Adoption",
@@ -196,16 +205,29 @@ export const profileData = {
             ]
         },
         {
-            id: "tourist-guide",
-            title: "Tourist Guide Website",
+            id: "travelo",
+            title: "Travelo",
             description: {
-                en: "Tourist website featuring destinations, hotels using HTML/CSS.",
-                fr: "Site web touristique avec destinations, hôtels et restaurants.",
+                en: "Discover the Magic of Morocco. From the golden dunes of the Sahara to the blue streets of Chefchaouen, experience an unforgettable journey through Morocco's wonders.",
+                fr: "Découvrez la magie du Maroc. Des dunes dorées du Sahara aux rues bleues de Chefchaouen, vivez un voyage inoubliable à travers les merveilles du Maroc.",
             },
-            tags: ["HTML", "CSS", "JS"],
-            link: "#",
-            images: [],
-            features: []
+            tags: ["laravel", "Vue.js", "HTML", "CSS", "GitHub", "Designe Paterns"],
+            link: "/projects/travelo",
+            images: [
+                "/images/projects/travelo/project/image.png",
+                "/images/projects/travelo/project/image copy.png",
+                "/images/projects/travelo/project/image copy 2.png",
+                "/images/projects/travelo/project/image copy 3.png",
+                "/images/projects/travelo/project/image copy 4.png",
+                "/images/projects/travelo/project/image copy 5.png",
+            ],
+            adminImages: [],
+            features: [
+                "Explore Destinations",
+                "Search Wonders",
+                "Interactive Map",
+                "Trip Planner"
+            ]
         },
     ],
 };
