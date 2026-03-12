@@ -1,13 +1,11 @@
 "use client";
 
-import { useLanguage } from "@/context/language-context";
 import { translations, profileData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { Code2, Database, Layout, Server, Terminal } from "lucide-react";
 
 export function Skills() {
-    const { language } = useLanguage();
-    const t = translations[language].skills;
+    const t = translations.skills;
 
     // Simplified categories without specific color props
     const categories = [
