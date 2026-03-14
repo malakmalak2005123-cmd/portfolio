@@ -230,14 +230,16 @@ export function Projects() {
                                                 >
                                                     <Github size={18} /> Code
                                                 </a>
-                                                <a
-                                                    href={project.link}
-                                                    target={project.link.startsWith('/') ? "_self" : "_blank"}
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors text-sm font-medium"
-                                                >
-                                                    {project.link.startsWith('/') ? "View Details" : "Live Demo"} <ExternalLink size={16} />
-                                                </a>
+                                                {project.link && (
+                                                    <a
+                                                        href={project.link}
+                                                        target={project.link.startsWith('/') ? "_self" : "_blank"}
+                                                        rel="noopener noreferrer"
+                                                        className="flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors text-sm font-medium"
+                                                    >
+                                                        {project.link.startsWith('/') ? "View Details" : "Live Demo"} <ExternalLink size={16} />
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
