@@ -42,19 +42,18 @@ export const translations = {
 };
 
 export const profileData = {
-    name: "Malak Messaoudi",
-    role: "Full-Stack Web Developer",
-    email: "messaoudimalak01@gmail.com",
+    name: "Malak",
+    role: "Full Stack Developer",
+    email: "malakmalak2005123@gmail.com",
     phone: "0709186544",
-    github: "https://github.com/MalakMessaoudi",
+    github: "https://github.com/malakmalak2005123-cmd",
     linkedin: "https://www.linkedin.com/in/malak-messaoudi/",
     skills: {
         frontend: [
-            { name: "HTML5", icon: "html" },
-            { name: "CSS3", icon: "css" },
-            { name: "JavaScript (ES6+)", icon: "js" },
-            { name: "TypeScript", icon: "typescript" },
-            { name: "React.js", icon: "react" },
+            { name: "HTML", icon: "html" },
+            { name: "CSS", icon: "css" },
+            { name: "JavaScript", icon: "js" },
+            { name: "React", icon: "react" },
             { name: "Tailwind CSS", icon: "tailwind" },
             { name: "Figma", icon: "figma" },
             { name: "Vue.js", icon: "vue" },    
@@ -65,13 +64,14 @@ export const profileData = {
             { name: "Postman", icon: "postman" },
         ],
         databases: [
+
             { name: "PostgreSQL", icon: "postgresql" },
             { name: "MySQL", icon: "mysql" },
         ],
     },
     experiences: [
         {
-            title: "Full-Stack Developer (Internship)",
+            title: "Full Stack Developer (Internship)",
             company_name: "Ark-x Talent Solutions, Oujda",
             icon: "freelance",
             iconBg: "#383E56",
@@ -82,10 +82,10 @@ export const profileData = {
                 "Collaborative work in an agile team to deliver scalable web solutions.",
                 "Improving overall application performance and speed through code optimization.",
             ],
-            tech: ["PHP (Laravel)", "Vue.js", "HTML5", "CSS3", "Tailwind CSS", "MySQL", "pgAdmin", "Git", "GitHub", "Postman"]
+            tech: ["PHP", "Laravel", "Vue.js", "JavaScript", "HTML5", "CSS3", "Tailwind CSS", "MySQL", "PgAdmin", "Git", "GitHub", "Postman"]
         },
         {
-            title: "Full-Stack Developer (Internship)",
+            title: "PHP Web Developer (Internship)",
             company_name: "CHU, Oujda",
             icon: "agency",
             iconBg: "#E6DEDD",
